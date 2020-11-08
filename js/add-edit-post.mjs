@@ -57,7 +57,7 @@ const handlePostFormSubmit = async (e) => {
         const postId = params.get('postId');
         const mode = postId ? 'edit' : 'add';
         if (mode === 'add') {
-            document.querySelector('#savePostButton').innerHTML = '<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>Loading...';
+            document.querySelector('#savePostButton').innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>';
             document.querySelector('#savePostButton').disabled = true;
             const post = await postApi.add(formValues);
             alert('Add new post successfully');
@@ -65,7 +65,7 @@ const handlePostFormSubmit = async (e) => {
             window.location = editPostUrl;
         }
         else {
-            document.querySelector('#savePostButton').innerHTML = '<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>Loading...';
+            document.querySelector('#savePostButton').innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>';
             document.querySelector('#savePostButton').disabled = true;
             const payload = {
                 id: postId,
@@ -120,9 +120,6 @@ const init = async () => {
     if (changePostBannerButton) {
         changePostBannerButton.addEventListener('click', ramdomBannerImage);
     }
-
-
-
 };
 
 init();

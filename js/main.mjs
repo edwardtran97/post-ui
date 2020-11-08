@@ -4,7 +4,7 @@ import postApi from './api/postApi.js';
 import utils from './utils.js'
 
 const handlePostRemove = async (post, postItemElement) => {
-  const confirmMessage = `Are u sure to delete "${post.title}"`;
+  const confirmMessage = `Are you sure want to delete "${post.title}"`;
   if (window.confirm(confirmMessage)) {
     postApi.remove(post.id);
     postItemElement.remove(post.id);

@@ -1,4 +1,4 @@
-import fetchClient from './fetchClient.js';
+import fetchClient from './axiosClient.js';
 import AppConstants from '../appConstants.js';
 import BaseApi from './baseApi.js';
 
